@@ -1,6 +1,7 @@
+// File di configurazione dello store Redux, dove combiniamo tutti i reducer
 import { configureStore } from "@reduxjs/toolkit";
-import authReducer from "./authSlice";
-import transactionReducer from "./transactionSlice";
+import authReducer from "./authSlice"; // Slice per l'autenticazione
+import transactionReducer from "./transactionSlice"; // Slice per le transazioni
 
 
 export default configureStore({
@@ -9,3 +10,4 @@ export default configureStore({
     transactions: transactionReducer,
   },
 });
+
