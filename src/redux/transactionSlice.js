@@ -1,10 +1,11 @@
+// Slice Redux per gestire lo stato delle transazioni e le operazioni asincrone
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // Base URL for JSON Server
 const API_URL = "http://localhost:3000/transactions";
 
-// Thunk: Fetch transactions
+// Thunk: Fetch transactions // Thunk asincrono per caricare le transazioni
 export const fetchTransactions = createAsyncThunk(
   "transactions/fetchTransactions",
   async () => {
@@ -13,7 +14,7 @@ export const fetchTransactions = createAsyncThunk(
   }
 );
 
-// Thunk: Add new transaction
+// Thunk: Add new transaction // Thunk per aggiungere una nuova transazione
 export const addTransaction = createAsyncThunk(
   "transactions/addTransaction",
   async (transaction) => {
@@ -22,7 +23,7 @@ export const addTransaction = createAsyncThunk(
   }
 );
 
-// Thunk: Delete transaction
+// Thunk: Delete transaction // Thunk per eliminare una transazione
 export const deleteTransaction = createAsyncThunk(
   "transactions/deleteTransaction",
   async (id) => {
@@ -63,3 +64,4 @@ const transactionSlice = createSlice({
 });
 
 export default transactionSlice.reducer;
+
