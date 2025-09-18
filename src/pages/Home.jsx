@@ -1,5 +1,5 @@
 import background from "../assets/background.jpg";
-
+// Pagina principale dell'applicazione, visibile a tutti gli utenti
 export default function Home() {
     return (
     <div
@@ -18,4 +18,5 @@ export default function Home() {
     </div>
     );
   }
+
 
