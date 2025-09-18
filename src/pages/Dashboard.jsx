@@ -1,7 +1,8 @@
+// Pagina del dashboard, con contenuto diverso a seconda del ruolo dell'utente
 import { useSelector } from "react-redux";
 
 export default function Dashboard() {
-  const { role } = useSelector((state) => state.auth);
+  const { role } = useSelector((state) => state.auth); // Recupera il ruolo dallo stato
 
   return (
     <div>
@@ -10,3 +11,4 @@ export default function Dashboard() {
     </div>
   );
 }
+
